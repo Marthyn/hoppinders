@@ -1,0 +1,40 @@
+#!/bin/bash
+export RAILS_ENV=test
+
+run() {
+  time bundle exec $*
+}
+
+echo "--- Starting continuous integration build"
+
+bundle
+
+echo "--- Migrate the database from scratch"
+
+run rake db:drop
+run rake db:create
+run rake db:schema:load
+
+echo "--- Check style"
+
+run rubocop
+
+echo "--- Check security"
+
+run brakeman -o brakeman-output.tabs --no-progress --separate-models
+
+echo "--- Doing a static analysis"
+
+rubycritic app lib config
+
+echo "--- Check tests"
+
+run rspec --color spec --format progress --format html --out rspec.html
+if [[ $? -ne 0 ]]; then
+  echo "--- Tests failed."
+  exit 1
+fi
+
+echo "--- Check quality"
+
+# TODO: add cane

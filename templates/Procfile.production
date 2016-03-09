@@ -1,0 +1,2 @@
+web: /home/deployer/.rbenv/bin/rbenv exec bundle exec unicorn -c deploy_path/config/unicorn.rb
+worker: bundle exec rake jobs:work

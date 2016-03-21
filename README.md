@@ -96,19 +96,6 @@ Hoppinders also comes with:
 * [t() and l() in specs without prefixing with I18n][i18n]
 * An automatically-created `SECRET_KEY_BASE` environment variable in all
   environments
-* Configuration for [CircleCI][circle] Continuous Integration (tests)
-* Configuration for [Hound][hound] Continuous Integration (style)
-* The analytics adapter [Segment][segment] (and therefore config for Google
-  Analytics, Intercom, Facebook Ads, Twitter Ads, etc.)
-
-[setup]: https://robots.thoughtbot.com/bin-setup
-[compress]: https://robots.thoughtbot.com/content-compression-with-rack-deflater
-[pool]: https://devcenter.heroku.com/articles/concurrency-and-database-connections
-[binstub]: https://github.com/thoughtbot/hoppinders/pull/282
-[i18n]: https://github.com/thoughtbot/hoppinders/pull/304
-[circle]: https://circleci.com/docs
-[hound]: https://houndci.com
-[segment]: https://segment.com
 
 ## Git
 
@@ -156,38 +143,3 @@ installing QT are
 [here](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit).
 
 PostgreSQL needs to be installed and running for the `db:create` rake task.
-
-## Issues
-
-If you have problems, please create a
-[GitHub Issue](https://github.com/thoughtbot/hoppinders/issues).
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Thank you, [contributors]!
-
-[contributors]: https://github.com/thoughtbot/hoppinders/graphs/contributors
-
-## License
-
-Hoppinders is Copyright © 2008-2016 thoughtbot.
-It is free software,
-and may be redistributed under the terms specified in the [LICENSE] file.
-
-[LICENSE]: LICENSE
-
-## About thoughtbot
-
-![thoughtbot](https://thoughtbot.com/logo.png)
-
-Hoppinders is maintained and funded by thoughtbot, inc.
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
-We love open source software!
-See [our other projects][community].
-We are [available for hire][hire].
-
-[community]: https://thoughtbot.com/community?utm_source=github
-[hire]: https://thoughtbot.com?utm_source=github
